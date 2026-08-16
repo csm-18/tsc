@@ -1,3 +1,3 @@
-void main() {
-  print("hello fellow!");
+void main(List<String> args) {
+  print(args.length);
 }
