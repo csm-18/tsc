@@ -13,6 +13,8 @@ List<String> expandResponseFiles(List<String> args) {
     }
     x += 1;
   }
+  var error = createDiagnosticMessage(100000, ["hello.txt"]);
+  error.printMessage();
 
   return args;
 }
