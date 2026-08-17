@@ -7,14 +7,32 @@ class DiagnosticMessage {
   String comment;
   DiagnosticMessage(this.code, this.message, this.category, this.comment);
   void printMessage() {
-    print(this.category + ' $code: ' + this.message);
+    print(this.category + ' TS$code: ' + this.message);
     if (ANJI_DIAGNOSTIC_COMMENTS) {
-      print(this.comment);
+      print('  ' + this.comment);
     }
   }
 }
 
 final List<DiagnosticMessage> diagnostic_messages = [
+  DiagnosticMessage(
+    0,
+    "",
+    "",
+    "",
+  ) /*Empty error to return from a function if no error*/,
+  DiagnosticMessage(
+    5012,
+    "Cannot read file '{}': {}.",
+    "error",
+    "Ghoor kya raha hai? Nahi hua to me kya karun?",
+  ),
+  DiagnosticMessage(
+    5083,
+    "Cannot read file '{}'.",
+    "error",
+    "Oye file kahan par hai?",
+  ),
   DiagnosticMessage(
     100000,
     "Too many response files provided. Circular reference suspected in file '{}'.",

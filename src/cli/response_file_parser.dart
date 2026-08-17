@@ -1,4 +1,5 @@
 import '../diagnostics.dart';
+import '../utils/file_io.dart';
 
 List<String> expandResponseFiles(List<String> args) {
   args = [...args];
@@ -13,10 +14,14 @@ List<String> expandResponseFiles(List<String> args) {
     }
     x += 1;
   }
-  var error = createDiagnosticMessage(100000, ["hello.txt"]);
-  error.printMessage();
-
   return args;
 }
 
-void parseResponseFile(String filename) {}
+void parseResponseFile(String filename) {
+  var (content, error) = readFileToString(filename);
+  if (error.code == 0) {
+    print(content);
+  } else {
+    error.printMessage();
+  }
+}
