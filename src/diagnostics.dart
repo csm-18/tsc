@@ -22,16 +22,16 @@ final List<DiagnosticMessage> diagnostic_messages = [
     "",
   ) /*Empty error to return from a function if no error*/,
   DiagnosticMessage(
-    5012,
-    "Cannot read file '{}': {}.",
-    "error",
-    "Ghoor kya raha hai? Nahi hua to me kya karun?",
-  ),
-  DiagnosticMessage(
     5083,
     "Cannot read file '{}'.",
     "error",
     "Oye file kahan par hai?",
+  ),
+  DiagnosticMessage(
+    6045,
+    "Unterminated quoted string in response file '{}'.",
+    "error",
+    "Yee ese nahi manega. Daya, isko uthao!",
   ),
   DiagnosticMessage(
     100000,
