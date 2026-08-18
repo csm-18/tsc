@@ -7,9 +7,9 @@ class DiagnosticMessage {
   String comment;
   DiagnosticMessage(this.code, this.message, this.category, this.comment);
   void printMessage() {
-    print(this.category + ' TS$code: ' + this.message);
+    print('$category TS$code: $message');
     if (ANJI_DIAGNOSTIC_COMMENTS) {
-      print('  ' + this.comment);
+      print('  $comment');
     }
   }
 }
