@@ -1,4 +1,3 @@
-import '../diagnostics.dart';
 import '../utils/file_io.dart';
 
 List<String> expandResponseFiles(List<String> args) {
